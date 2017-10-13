@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('首頁/',['as'=>'home.index','uses'=> 'HomeController@index']);
+
+Route::get('關於本站about/',['as'=>'about.index','uses'=> 'AboutController@index']);
+
+Route::get('最新消息/news',['as'=>'news.index','uses'=> 'NewsController@index']);
